@@ -46,4 +46,4 @@ plt.show()
 # Then, random_shocks groups it under a variable scattered across the number of days and simulations.
 # Lastly, price_paths generates each point by: multiplies it by those scattered percentage returns day-by-day,
 # generating the final dollar-value points in the grid.
-
+#jwsd
