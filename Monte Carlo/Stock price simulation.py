@@ -36,7 +36,9 @@ random_shocks = np.random.normal(0, daily_stdev, (num_days, num_simulations))
 price_paths = last_price * (1 + random_shocks).cumprod(axis=0)
 
 #random_shocks uses the standard deviation to pick a random percentage return in that range
-#price_paths forms each point in the grid using the random shock.
+#price_paths forms each point in the grid using the random shock. cumprod is like an exponential value:
+# each new price depends on the last, thus we multiply the old predicative with the random stdev the computer chose
+# That is how we get our new price, that is how AAPL got their first price in our data set
 
 print(daily_stdev)
 
