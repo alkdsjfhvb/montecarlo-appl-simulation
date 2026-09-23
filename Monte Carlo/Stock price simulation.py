@@ -22,7 +22,10 @@ returns = prices.pct_change().dropna()
 daily_stdev = float(returns.std())
 last_price = float(prices.iloc[-1])
 
-# standard deviation shows how clustered all possible points are. The higher it is the worse it is for us
+# standard deviation shows how clustered all possible points are. The higher it is the worse it is for us because
+# stdev works this way: there is a mean value and the further we go from the center, the bigger the spread is
+# meaning the bigger the stdev the bigger the possibility is for the computer to choose an inaccurate value
+# therefore making the prediction of the price less reliable
 # its formula is calculating the means of the prices basically and gives a range for the computer to chose from.
 #number of simulations
 num_simulations = 5
